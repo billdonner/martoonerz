@@ -12,12 +12,14 @@ import WebKit
 let url = URL(string: "https://martoons.myportfolio.com")!
 
 class ViewController: UIViewController,WKNavigationDelegate {
+    var firsttime = true 
 var webview: WKWebView!
     
     override func loadView() {
         webview = WKWebView()
         webview.navigationDelegate = self
         view = webview
+   
     }
     
     override func viewDidLoad() {
@@ -27,6 +29,21 @@ var webview: WKWebView!
         
 webview.allowsBackForwardNavigationGestures = true
         
+        // on very first time put up the helper vc
+
+        
+        
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if firsttime{
+            let vc = UIStoryboard(name:"Main",bundle:nil).instantiateViewController(withIdentifier: "OneTimeViewControllerID")
+            vc.modalTransitionStyle = .crossDissolve
+            vc.modalPresentationStyle = .overCurrentContext
+            present(vc,animated:true)
+            firsttime = false
+        }
     }
 
 

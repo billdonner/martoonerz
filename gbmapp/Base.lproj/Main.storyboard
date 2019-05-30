@@ -51,6 +51,80 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--One Time View Controller-->
+        <scene sceneID="Osl-GQ-2hZ">
+            <objects>
+                <viewController storyboardIdentifier="OneTimeViewControllerID" id="udF-Hr-Nbq" customClass="OneTimeViewController" customModule="martoons" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="29q-3B-bY3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HzQ-zZ-QoI">
+                                <rect key="frame" x="0.0" y="4" width="414" height="898"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="nUR-76-B19">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="898"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kvr-De-h6y">
+                                            <rect key="frame" x="0.0" y="40" width="414" height="818"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1024" translatesAutoresizingMaskIntoConstraints="NO" id="O2j-56-vBV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="189.5"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't Forget The Stickers - open iMessage and enjoy!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJJ-6B-sTj">
+                                                    <rect key="frame" x="31.5" y="209.5" width="351" height="189.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                    <color key="textColor" red="0.98146539929999999" green="0.35397388590000001" blue="0.4328570424" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQF-Px-Jgp">
+                                                    <rect key="frame" x="106" y="419" width="202" height="189.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                    <state key="normal" title="Open iMessage">
+                                                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="gotItPressed:" destination="udF-Hr-Nbq" eventType="touchUpInside" id="0Vq-xZ-bQj"/>
+                                                        <action selector="openImessagePressed:" destination="udF-Hr-Nbq" eventType="touchUpInside" id="vub-NE-mN4"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mf8-cH-aSB">
+                                                    <rect key="frame" x="186" y="628.5" width="42" height="189.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                    <state key="normal" title="OK">
+                                                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="gotItPressed:" destination="udF-Hr-Nbq" eventType="touchUpInside" id="5EE-Zv-HYq"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="kvr-De-h6y" firstAttribute="top" secondItem="nUR-76-B19" secondAttribute="top" constant="40" id="5DC-BY-aPk"/>
+                                        <constraint firstItem="kvr-De-h6y" firstAttribute="leading" secondItem="nUR-76-B19" secondAttribute="leading" id="8eR-1y-qZY"/>
+                                        <constraint firstAttribute="bottom" secondItem="kvr-De-h6y" secondAttribute="bottom" constant="40" id="ibU-5e-mYA"/>
+                                        <constraint firstAttribute="trailing" secondItem="kvr-De-h6y" secondAttribute="trailing" id="yM3-vA-cey"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="extraLight"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HzQ-zZ-QoI" firstAttribute="top" secondItem="Fr0-Yb-06H" secondAttribute="top" constant="-40" id="SQR-9w-Sml"/>
+                            <constraint firstItem="HzQ-zZ-QoI" firstAttribute="leading" secondItem="Fr0-Yb-06H" secondAttribute="leading" id="lvR-MT-meA"/>
+                            <constraint firstItem="Fr0-Yb-06H" firstAttribute="bottom" secondItem="HzQ-zZ-QoI" secondAttribute="bottom" constant="-40" id="nzK-9r-5kr"/>
+                            <constraint firstItem="Fr0-Yb-06H" firstAttribute="trailing" secondItem="HzQ-zZ-QoI" secondAttribute="trailing" id="s3U-6a-fLG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Fr0-Yb-06H"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pzi-Yh-bAB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1334.7826086956522" y="10.714285714285714"/>
+        </scene>
     </scenes>
     <resources>
         <image name="1024" width="1024" height="1024"/>
